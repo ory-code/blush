@@ -1,0 +1,308 @@
+@font-face {
+  font-family: "Glossy Display Light Italic";
+  src: url("./font/Glossy-Display-Light-Italic.otf");
+}
+
+@font-face {
+  font-family: "Glossy Display Light Condensed Italic";
+  src: url("./font/GlossyDisplay-Light-Condensed-Italic.otf");
+}
+
+@font-face {
+  font-family: "Glossy";
+  src: url("./font/Glossy.otf");
+}
+body {
+  margin: 0 auto;
+}
+
+a ::before,
+:visited {
+  color: black;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+/*header*/
+header {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  margin-right: 50px;
+  font-family: "Glossy";
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  width: 90px;
+  justify-content: space-around;
+}
+.menu i {
+  cursor: pointer;
+}
+.linkWebSite {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 185px;
+}
+.language {
+  display: flex;
+  flex-direction: column;
+}
+
+.basket {
+  display: flex;
+  align-items: center;
+  width: 35px;
+  font-weight: bold;
+}
+.number {
+  margin-left: 10px;
+}
+/*top*/
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+}
+.carousel {
+  background: url(./images/Groupe470.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1.5rem;
+  height: 800px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  background: rgba(93, 93, 93, 0.459);
+  border-radius: 1.5rem;
+}
+.contentCarousel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1fr 3fr 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas: ". info arrow";
+  align-items: center;
+}
+.infoCarousel {
+  grid-area: info;
+  z-index: 100;
+  justify-content: center;
+  line-height: 0.5;
+}
+.infoCarousel p {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Glossy";
+}
+.contentCarousel .arrow {
+  display: flex;
+  justify-content: center;
+  grid-area: arrow;
+  z-index: 100;
+  align-items: center;
+}
+
+.contentCarousel span {
+  color: white;
+  font-style: italic;
+  font-size: 18px;
+}
+.contentCarousel i {
+  margin-left: 20px;
+  color: rgba(163, 161, 161, 0.644);
+  font-size: 55px;
+  cursor: pointer;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  width: 125px;
+  height: 45px;
+  border-radius: 0.5rem;
+  bottom: 25%;
+  left: 50%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/*middle*/
+.middleInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.middleInfo h1 {
+  font-family: "Glossy";
+  font-weight: lighter;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 25px;
+  height: auto;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "product1 product2"
+    "product3 product4";
+}
+
+.product1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  grid-area: product1;
+  background-color: #ba967e;
+  height: 800px;
+}
+.product1 span {
+  color: #fff;
+  font-family: "Glossy";
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.titre {
+  font-family: "Glossy";
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+  font-size: 35px;
+  width: 40%;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 8px;
+}
+.descriptionProduct {
+  width: 45%;
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  margin-top: -35px;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  color: white;
+}
+.detail p {
+  margin: 5px;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.price {
+  color: #fff;
+  font-weight: 200;
+  font-family: "Roboto", sans-serif;
+}
+.seeMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 105px;
+  height: 35px;
+  border-radius: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+.product2 {
+  border-radius: 1.5rem;
+  grid-area: product2;
+  background-image: url(./images/Groupe-6.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+}
+
+.headerProductContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  line-height: 0.3;
+  border-bottom: 1px solid white;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.detailHeader {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+.priceHeaderProduct {
+  color: #fff;
+  font-weight: 200;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+}
+.product3 {
+  border-radius: 1.5rem;
+  grid-area: product3;
+
+  background-image: url(./images/Groupe-de-masques-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+}
+
+.product4 {
+  border-radius: 1.5rem;
+  grid-area: product4;
+  background-color: #a7968c;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product4 span {
+  color: #fff;
+  font-family: "Glossy";
+  font-size: 12px;
+  letter-spacing: 1px;
+}

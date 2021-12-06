@@ -15,16 +15,22 @@
 body {
   margin: 0 auto;
   background-color: #fdfdfd;
-  
 }
 .allpage {
   padding: 2%;
   display: flex;
   flex-direction: column;
 }
+.allpageContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
 a ::before,
 :visited {
-  color: black;
   text-decoration: none;
 }
 a {
@@ -34,16 +40,21 @@ a {
 header {
   display: flex;
   align-items: center;
-
+  padding-top: 2%;
+  margin: 0;
+  padding-left: 2%;
+  padding-right: 2%;
   justify-content: space-between;
   margin-right: 50px;
   font-family: "Glossy";
+  font-size: 18px;
 }
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 500px;
+  font-size: 18px;
 }
 .menu {
   display: flex;
@@ -204,28 +215,28 @@ section {
   background-color: #ba967e;
   height: 800px;
 }
+
 .product1 span {
   color: #fff;
   font-family: "Glossy";
-  font-size: 12px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 .titre {
   font-family: "Glossy";
   color: rgb(255, 255, 255);
   font-weight: 100;
-  font-size: 35px;
+  font-size: 80px;
   width: 40%;
   text-align: center;
-  margin: 0;
-  letter-spacing: 8px;
 }
 .descriptionProduct {
   width: 45%;
   text-align: center;
   color: #fff;
   font-weight: 300;
-  margin-top: -35px;
+  margin-top: -45px;
+  font-size: 24px;
 }
 .detail {
   display: flex;
@@ -238,8 +249,8 @@ section {
 .detail p {
   margin: 5px;
   font-weight: 100;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-family: "Glossy Display Light Condensed";
+  font-size: 20px;
 }
 
 .price {
@@ -314,12 +325,14 @@ section {
 .product4 span {
   color: #fff;
   font-family: "Glossy";
-  font-size: 12px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 
 /*bottom*/
-
+.bottom {
+  margin-top: 5%;
+}
 .bottomMain {
   display: grid;
   grid-template-columns: 1.3fr 0.5fr;
@@ -334,10 +347,8 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px;
 
   letter-spacing: 2px;
-  grid-area: text;
   font-family: "Glossy";
   font-size: 65px;
 }
@@ -352,31 +363,33 @@ section {
 }
 
 .bottomDowm {
-  margin-top: 30px;
+  margin-top: 15%;
   background-color: #f6efe5;
   display: flex;
   flex-direction: column;
+  position: relative;
+  height: 100%;
 }
 .contain {
-  display: grid;
-  position: relative;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
-  gap: 10px;
-  grid-auto-flow: row;
-  grid-template-areas: "img1 img2";
+  background-color: #f6efe5;
+
   align-items: center;
-
-}
-.contain1 {
-  grid-area: img1;
-  
-}
-.contain2 {
-  grid-area: img2;
-  
+  display: flex;
+  justify-content: space-around;
+  padding: 1%;
+  z-index: 100;
 }
 
+.img1 {
+  top: -30%;
+  position: absolute;
+  left: 3%;
+}
+.img2 {
+  top: -30%;
+  position: absolute;
+  right: 3%;
+}
 .textContain2 {
   display: flex;
   color: #8a8179;
@@ -391,14 +404,18 @@ section {
   border-radius: 1rem;
   padding: 1.5%;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 65%;
+  right: 3%;
   margin: 3%;
+  z-index: 100;
 }
 
+.social {
+  margin-top: 20%;
+}
 .socialContent {
   padding: 2%;
- 
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -422,7 +439,58 @@ section {
 .imgBottom {
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   margin-top: 5%;
+  margin-bottom: 5%;
+}
 
+/*footer*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdfdfd;
+}
+.logofooter {
+  margin-left: 10%;
+}
+
+.infoFooter {
+  display: flex;
+  margin: 2%;
+  margin-right: 15%;
+  padding: 2%;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.infoFooterContent {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  font-family: "Glossy";
+  color: #a7968c;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+}
+.infoFooterContent a {
+  color: #a7968c;
+}
+.infoFooterContent a :visited :before {
+  color: #a7968c;
+  text-decoration: none;
+}
+
+.titleFooter {
+  font-size: 25px;
+  color: black;
+  font-family: "Glossy Display Light Condensed";
+}
+.linefooter {
+  border-top: 1px solid #8a8179;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: "Roboro";
+  color: #857b74;
 }
